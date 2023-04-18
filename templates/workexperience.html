@@ -1,0 +1,645 @@
+{% extends 'base.html' %}
+
+{% block title %} Work Experience{% endblock title %}
+
+
+
+{% block body %}
+
+<style>
+
+    .p1
+    {
+        style="text-align: justify;
+        font-weight: normal;
+        font-family: Georgia;
+        color: Black;
+        font-size: medium;
+        line-height: 1.9;
+        margin-left :190px ;
+        margin-right : 190px;"
+
+    }
+    .ol1
+    {
+        color:Black;
+        margin-left :155px ;
+        margin-right : 190px;
+        line-height: 1.9;
+    }
+    h4
+  {
+  text-align: center;
+  font-weight: normal;
+  font-family: Georgia;
+  color: Black	;
+  line-height: 1.6;
+  margin-top: 50px;
+  }
+
+  h5
+  {
+  text-align: center;
+  font-weight: bold;
+  font-family: Georgia;
+  font-size: medium;
+  color: DarkGreen	;
+  margin-top: 50px;
+  }
+
+  .p3
+  {
+        style="text-align: justify;
+        font-weight: normal;
+        font-family: Georgia;
+        font-size: medium;
+        color: Black	;
+        line-height: 1.9;
+        margin-left :190px ;
+        margin-right : 190px;"
+  }
+  .b1
+  {
+        style="text-align: justify;
+        font-weight: normal;
+        font-family: Georgia;
+        font-size: medium;
+        color: Black	;
+<!--        line-height: 1.9;-->
+<!--        margin-left :190px ;-->
+<!--        margin-right : 190px;"-->
+  }
+
+
+<!--  #######################################testmonials###################################-->
+.name
+{
+font-weight: normal;
+  font-family: Georgia;
+  color: Black;
+
+}
+
+.p3
+{
+font-weight: normal;
+  font-family: Georgia;
+  color: Black;
+
+
+}
+#testimonial4 {
+  overflow: hidden;
+  min-height: 375px;
+  position: relative;
+  background-image : url('/static/b_g_img.jpg');
+}
+
+#testimonial4 .carousel-inner {
+  width: 75%;
+  margin: auto;
+}
+
+#testimonial4 .carousel-inner:hover {
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+#testimonial4 .carousel-inner:active {
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+#testimonial4 .carousel-inner .item {
+  overflow: hidden;
+}
+
+.testimonial4_indicators .carousel-indicators {
+  left: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 0;
+  height: 20px;
+  bottom: 15px;
+  padding: 0 5px;
+  cursor: e-resize;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.testimonial4_indicators .carousel-indicators li {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: none;
+  text-indent: 0;
+  margin: 2px 3px;
+  cursor: pointer;
+  display: inline-block;
+  background: #ffffff;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.testimonial4_indicators .carousel-indicators .active {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: none;
+  margin: 2px 3px;
+  background-color: #000;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar {
+  height: 3px;
+}
+
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar-thumb {
+  background: #eeeeee;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.testimonial4_control_button .carousel-control {
+  top: 175px;
+  opacity: 1;
+  width: 40px;
+  bottom: auto;
+  height: 40px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 38px;
+  text-shadow: none;
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.6s cubic-bezier(0.3, 1, 0, 1);
+  transition: all 0.6s cubic-bezier(0.3, 1, 0, 1);
+}
+
+.testimonial4_control_button .carousel-control.left {
+  left: 7%;
+  right: auto;
+}
+
+.testimonial4_control_button .carousel-control.right {
+  right: 7%;
+  left: auto;
+}
+
+.testimonial4_control_button .carousel-control.left:hover,
+.testimonial4_control_button .carousel-control.right:hover {
+  color: #000;
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+.testimonial4_header {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 550px;
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial4_header h4 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.testimonial4_slide {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.testimonial4_slide img {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  color: #f2f2f2;
+  font-size: 18px;
+  line-height: 46px;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial4_slide p {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 40px 0 20px 0;
+}
+
+.testimonial4_slide h4 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+  .testimonial4_control_button .carousel-control {
+    display: none;
+  }
+  .testimonial4_header {
+    width: 95%;
+  }
+  .testimonial4_header h4 {
+    font-size: 20px;
+  }
+  .testimonial4_slide {
+    width: 98%;
+    padding: 5px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .testimonial4_control_button .carousel-control.left {
+    left: 2%;
+  }
+  .testimonial4_control_button .carousel-control.right {
+    right: 2%;
+  }
+  .testimonial4_header {
+    width: 95%;
+  }
+  .testimonial4_slide {
+    width: 98%;
+    padding: 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .testimonial4_control_button .carousel-control.left {
+    left: 5%;
+  }
+  .testimonial4_control_button .carousel-control.right {
+    right: 5%;
+  }
+}
+
+@-webkit-keyframes psBoxShadowEffect_2 {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #ffffff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px 5px #ffffff, 0 0 0 5px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes psBoxShadowEffect_2 {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #ffffff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px 5px #ffffff, 0 0 0 5px rgba(255, 255, 255, 0.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+
+</style>
+
+
+
+<h4> Product Manager  @ S T Consultancy Services</h4>
+
+<h5>HISTORY & IDEATION</h5>
+
+<p class="p1">
+
+    S T Consultancy Services, a Tax Firm was established in 2016. The idea for the firm came
+    from the lack of proper establishment pertaining to taxation and tax law related service providers.
+    Even though their were initiatives where external parties affiliated with some firm would come
+    to towns and visit individual establishements and handover their data to the tax firms in the cities,
+    what was noticed after talking to several
+    individuals was that they wanted a more personal experience and more face to face interactions.
+    given that it is a town that has a lot of busniess establishments, and working individuals, schools
+    and hospitals it was for sure that an established like ours would work. But people adapting to the new
+    establishment was a bit of a challenge. This challenge was overcome by adapting to high imapct less tradeoff
+    actions. The action were services that were added into the firm's list.</p>
+
+<center>
+
+        <img src="/static/CSeg.jpg" style="margin-bottom:50px;">
+    <br>
+        <p class="p1">After interviewing over 50+ customers, the idea needed to undergo SWOT Analysis to evaluate it prospects.</p>
+
+
+        <img src="/static/SWOT_2.jpg" style="margin-bottom:50px;">
+    <br>
+
+
+
+        <img src="/static/MVP.jpg">
+
+    <br>
+
+        <p class="p3" style="margin-top: 50px;">
+            For the second round of expansion toward different organization and to design an MVP.
+            The diagram below displays the crux of the Minimum Viable Product ideation,
+            the implementation of which lead to a positive result/outcome.
+        </p>
+        <p class="p3">
+            <b class="b1">Pricing</b> depending on the service/product acquired the final decision
+            on pricing was done based on multiple factors, some of which included:
+            Complexity of the work, resources spent to provide the service/ product
+            evaluating our competitors, etc.
+        </p>
+
+</center>
+
+<h5>SERVICES</h5>
+
+
+        <p class="p1">
+
+
+            The firm provides various taxation related services, financial consulting,
+            other services like preparing project reports, troubleshooting any billing
+            software related issues, etc. Some of the services we provide has given us
+            an edge over our competitors. One of the major part of my work is to interact
+            with stakeholders, clients, partners, having client empathy, having a proper
+            understanding of  client's services requirement and guiding them through, etc.
+            Filing of tax returns of institutions and other establishments, etc are also
+            under my umbrella of responsibilities.
+</p>
+
+
+<h5>RESPONSIBILITIES & ACHIEVEMENTS</h5>
+
+
+<p class="p1">
+   <div style="font-family: Georgia;">
+        <ol class="ol1">
+            <b style="color:Black;">
+                Leadership experience:
+            </b>
+                Building a firm from ground up and building a customer base.
+        </ol>
+        <ol class="ol1">
+                Introduced B2B Payroll/Billing Implementation and Training Product and Service Line
+                which
+            <b style="color:Black;">
+                increased revenue by more than 120%;
+            </b>
+                serving Hospitals, State Government and
+                Educational Institutions
+        </ol>
+        <ol class="ol1">
+            <b style="color:Black;">
+                Effectively communicating with stakeholders and partners
+            </b>
+                ;s for faster service provisioning;resulting in an average yearly increase
+                in client acquisition by 100%
+        </ol>
+        <ol class="ol1">
+            <b style="color:Black;">
+                Maintain customer empathy.
+            </b>; resulting in
+            <b style="color:Black;">
+                90% client retention
+            </b>
+                year over year
+        </ol>
+        <ol class="ol1">
+            <b style="color:Black;">
+                Conducted A/B testing
+            </b>
+                of advertising and referral campaigns; resulting in referral campaigns
+            <b style="color:Black;">
+                increasing customer acquisitions by more than 50%
+            </b>
+        </ol>
+        <ol class="ol1">
+            <b style="color:Black;">
+                Effective Time Management
+            </b>
+                /Sense of Urgency; Dealing with several time sensitive and
+                strict deadline related work, return filing, overseeing preparation of
+                project reports for banking purposes, etc.
+        </ol>
+        <ol class="ol1">
+                Expanded client base by providing
+            <b style="color:Black;">
+                remote assistance to clients
+            </b>
+                resulting in acquiring clients located elsewhere.
+        </ol>
+        <ol class="ol1">
+            <b style="color:Black;">
+                Interviewed over 200 clients to define user requirements,
+            </b>
+                identify pain points, define product features, and develop product roadmap
+        </ol>
+        <ol class="ol1">
+            <b style="color:Black;">
+                Design and launch MVP to troubleshoot any issues,
+                pertaining to billing software (SaaS)
+            </b>
+                of several institutions of the state government, resulting in obtaining
+                these state government institutions as clients.
+        </ol>
+
+
+    </div>
+
+</p>
+<br>
+
+
+<h5>
+        Given below is the results of the survey taken on 50 clients
+</h5>
+
+
+<center>
+        <img src="/static/img.png" width="500" height="300" style="margin-top:50px">
+</center>
+<br>
+
+
+<center>
+        <img src="/static/chart.jpg"  style="margin-top:50px">
+</center>
+<br>
+
+<!--<h4>Testimonials</h4>-->
+
+<!--<div class="container">-->
+
+<!--    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">-->
+<!--        <div class="carousel-inner">-->
+<!--            <div class="carousel-item active">-->
+<!--                <p class="p2" style="text-align:center; padding:59px;">-->
+<!--                    <i>The establishment and its personnel have been very cordial and-->
+<!--                        punctual at their work, with well qualified professionals. - <b>Abraham T, Business</b>-->
+<!--                    </i>-->
+
+<!--                </p>-->
+<!--            </div>-->
+<!--        <div class="carousel-item">-->
+<!--                <p class="p2" style="text-align:center; padding:59px;">-->
+<!--                    <i>Since acquiring the services, there have been no error in-->
+<!--                        our establishment's tax filing. They provide excellent guidance.-->
+<!--                        We have been acquiring their services for the last 5-6 years-->
+<!--                        and have been a happy client.-<b>Thomas Mathew, Principal</b>-->
+<!--                    </i>-->
+<!--                </p>-->
+<!--        </div>-->
+<!--        <div class="carousel-item">-->
+<!--                <p class="p2" style="text-align:center; padding:59px;">-->
+<!--                    <i>-->
+<!--                        The services are easy to access. Work has been on time.-->
+<!--                        Everyone is very patient and polite. Glad to be affiliated with them.-<b>Dr. Sheena, MO</b>-->
+<!--                    </i>-->
+<!--                </p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">-->
+<!--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--            <span class="visually-hidden">Previous</span>-->
+<!--        </button>-->
+<!--        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">-->
+<!--            <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--            <span class="visually-hidden">Next</span>-->
+<!--        </button>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<h4>Testimonials</h4>-->
+
+<!--<div class="container">-->
+
+<!--    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">-->
+<!--  <div class="carousel-inner">-->
+<!--    <div class="carousel-item active">-->
+<!--<p style="text-align:center; padding:59px;">-->
+<!--<i>The establishment and its personnel have been very cordial and-->
+<!--                        punctual at their work, with well qualified professionals. -<b>Abraham T, Business</b></i>-->
+
+<!--</p>-->
+<!--    </div>-->
+<!--    <div class="carousel-item">-->
+<!--      <p style="text-align:center; padding:59px;"><i>Since acquiring the services, there have been no error in our establishment's-->
+<!--           tax filing. They provide excellent guidance. We have been acquiring their-->
+<!--       services for the last 5-6 years and have been a happy client.-->
+
+<!-- -<b>Thomas Mathew, Principal</b></i>-->
+
+<!--</p>-->
+<!--    </div>-->
+<!--    <div class="carousel-item">-->
+<!--      <p style="text-align:center; padding:59px;"><i>The services are easy to access. Work has been on time.-->
+<!--  Everyone is very patient and polite.-->
+<!--  Glad to be affiliated with them.-->
+
+<!--          -<b>Dr. Sheena, MO</b></i>-->
+
+<!--</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">-->
+<!--    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--    <span class="visually-hidden">Previous</span>-->
+<!--  </button>-->
+<!--  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">-->
+<!--    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--    <span class="visually-hidden">Next</span>-->
+<!--  </button>-->
+<!--</div>-->
+
+<!--</div>-->
+
+<!--<h4>Testimonials</h4>-->
+
+<div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+  <div class="testimonial4_header">
+    <h4>Testimonials</h4>
+  </div>
+  <ol class="carousel-indicators">
+    <li data-target="#testimonial4" data-slide-to="0" class="active"></li>
+    <li data-target="#testimonial4" data-slide-to="1"></li>
+    <li data-target="#testimonial4" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="testimonial4_slide">
+
+        <p class="p3">Ethical, with well qualified professionals.
+            They have guided us throughly pertaining to our venture.  Glad to be affiliated with them.
+            </p>
+        <h4 class="name">Abraham T, Business</h4>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="testimonial4_slide">
+
+        <p class="p3">Since acquiring the services, there have been no error in our establishment's
+           tax filing. They provide excellent guidance. We have been acquiring their
+           services for the last 5-6 years and have been a happy client.</p>
+        <h4 class="name">Thomas Mathew, Principal</h4>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="testimonial4_slide">
+
+        <p class="p3">The services are easy to access. Well updated and well
+            informed, their guidance on taxation as well as their software related assistance have been a great help .
+            Glad to be affiliated with them.</p>
+        <h4 class="name">Dr. Sheena, MO</h4>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#testimonial4" role="button" data-slide="prev">
+    <span class="fa fa-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#testimonial4" role="button" data-slide="next">
+    <span class="fa fa-chevron-right"></span>
+  </a>
+</div>
+
+
+{% endblock %}

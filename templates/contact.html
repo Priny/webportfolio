@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+{% block body %}
+
+
+
+<style>
+
+   .container
+    {
+        margin-left:190;
+        margin-right:190;
+    }
+
+    .glow:hover
+    {
+        color: rgb(0, 0, 0, 1);
+        box-shadow: 0 5px 15px rgb(0, 0, 0, .4);
+    }
+    .btn
+    {
+        width: 110px;
+        align: center;
+        padding: 10px;
+        background-color:DarkSlateGray;
+
+    }
+
+
+
+
+</style>
+
+
+
+
+<h4 style="text-align: center;
+  font-weight: bold;
+  font-family: Georgia;
+  color: DarkSlateGray;
+  line-height: 1.6;
+  margin-top: 50px;"> Contact</h4>
+<br>
+
+
+<center><a href="mailto: shifadavis1090@gmail.com" style="
+  font-weight: bold;
+  font-family: Georgia;
+  color: DarkSlateGray;
+  line-height: 1.6;
+  "> shifadavis1090@gmail.com</a></center>
+<p style="text-align: center;
+  font-weight: bold;
+  font-family: Georgia;
+  color: DarkSlateGray;
+  line-height: 1.6;
+  margin-top:10px;
+  ">8078359364</p>
+
+
+
+
+<!--################## contact form #################-->
+
+<h4 style="text-align: center;
+  font-weight: bold;
+  font-family: Georgia;
+  color: DarkSlateGray;
+  line-height: 1.6;
+  margin-top: 50px;">Feedback</h4>
+
+<div>
+  <div class="container py-4">
+<form method="post">
+
+  {% csrf_token %}
+
+
+  <div class="mb-3" >
+    <label class="form-label" for="name" style="font-family: Georgia;
+  color: DarkSlateGray;"
+>Name</label>
+    <input required type="text" class="form-control" id="name" name="name"
+    placeholder="Enter your name" >
+  </div>
+
+
+  <div class="mb-3">
+    <label class="form-label" for="emailAddress" style="font-family: Georgia;
+  color: DarkSlateGray;"
+>Email address</label>
+    <input type="email" name="emailAddress" class="form-control" id="emailAddress" placeholder="name@example.com"
+           required>
+  </div>
+
+
+  <div class="mb-3">
+    <label class="form-label" for="message" style="font-family: Georgia;
+  color: DarkSlateGray;"
+>Feedback</label>
+    <textarea class="form-control" name="message" id="message" rows="3" placeholder="Please write your feedback here"
+    required></textarea>
+  </div>
+  <div class="d-grid">
+     <center> <button class="btn btn-lg" type="submit" style=" color:Cornsilk;font-weight: bold;
+  font-family: Georgia;"><span class="glow"> Submit </span></button></center>
+    </div>
+      <br>
+</form>
+  </div>
+</div>
+
+{% endblock %}

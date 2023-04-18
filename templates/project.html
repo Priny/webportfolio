@@ -1,0 +1,407 @@
+{% extends 'base.html' %}
+
+{% block title %}Qualifications{% endblock title %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+{% block body %}
+
+<style>
+
+
+    p
+    {
+     text-align: justify;
+    font-weight: normal;
+    font-size: medium;
+    line-height: 1.4;
+    margin-left :100px ;
+    margin-right : 100px;
+    font-family: Georgia;
+    color: Black;
+    }
+
+    .b1
+    {
+    color: Black;
+    text-decoration: underline;
+    }
+    h2
+    {
+    text-align: center;
+    font-weight: normal;
+    font-family: Georgia;
+    color: Black;
+    line-height: 1.6;
+    margin-top: 50px;
+    }
+
+    .ol1
+    {
+    text-align: justify;
+    font-weight: normal;
+    font-size: medium;
+    font-family: Georgia;
+    color: Black;
+    line-height: 1.4;
+    margin-left :100px ;
+    margin-right : 100px;
+    }
+    h3
+
+    {
+    text-align: justify;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: medium;
+    line-height: 1.4;
+    margin-left :100px ;
+    margin-right : 100px;
+    font-family: Georgia;
+    color: Black;
+    }
+
+    .ol2
+    {
+    text-align: justify;
+    font-weight: normal;
+    font-size: medium;
+    font-family: Georgia;
+    color: Black;
+    line-height: 1.4;
+    margin-left :100px ;
+    margin-right : 100px;
+    }
+
+    .btn
+    {
+    background-color: DarkSlateGray  ;
+    margin-left: 150px;
+    text-align: justification;
+    color : HoneyDew;
+    font-weight: bold;
+    font-family: Georgia;
+
+
+    }
+    .glow:hover {
+    text-decoration:none;
+  color: rgb(0, 0, 0, 1);
+  box-shadow: 0 5px 15px rgb(0, 0, 0, .4);
+
+}
+a
+{
+      text-decoration: none;
+
+}
+
+
+<!--#################################-->
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background: #ff7979;
+}
+::selection{
+  color: #fff;
+  background: #ff7979;
+}
+.wrapper{
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.wrapper .center-line{
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #fff;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+.wrapper .row{
+  display: flex;
+}
+.wrapper .row-1{
+  justify-content: flex-start;
+}
+.wrapper .row-2{
+  justify-content: flex-end;
+}
+.wrapper .row section{
+  background: #fff;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
+.wrapper .row section::before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.row-1 section::before{
+  right: -7px;
+}
+.row-2 section::before{
+  left: -7px;
+}
+.row section .icon,
+.center-line .scroll-icon{
+  position: absolute;
+  background: #f2f2f2;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ff7979;
+  font-size: 17px;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+}
+.center-line .scroll-icon{
+  bottom: 0px;
+  left: 50%;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+.row-1 section .icon{
+  top: 15px;
+  right: -60px;
+}
+.row-2 section .icon{
+  top: 15px;
+  left: -60px;
+}
+.row section .details,
+.row section .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row section .details .title{
+  font-size: 22px;
+  font-weight: 600;
+}
+.row section p{
+  margin: 10px 0 17px 0;
+}
+.row section .bottom a{
+  text-decoration: none;
+  background: #ff7979;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  /* font-size: 17px; */
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+.row section .bottom a:hover{
+  transform: scale(0.97);
+}
+@media(max-width: 790px){
+  .wrapper .center-line{
+    left: 40px;
+  }
+  .wrapper .row{
+    margin: 30px 0 3px 60px;
+  }
+  .wrapper .row section{
+    width: 100%;
+  }
+  .row-1 section::before{
+    left: -7px;
+  }
+  .row-1 section .icon{
+    left: -60px;
+  }
+}
+@media(max-width: 440px){
+  .wrapper .center-line,
+  .row section::before,
+  .row section .icon{
+    display: none;
+  }
+  .wrapper .row{
+    margin: 10px 0;
+  }
+}
+.h
+{
+color: Black	;
+}
+
+</style>
+
+<h2> Skills</h2><br>
+
+<p><b class="b1">Product Management: </b> User Requirement, Product Roadmap, Kanban, Excellent written & oral communication,
+    Excellent interpersonal skills, Leadership, Stakeholder Management, Meticulous. Familiarity: JIRA, Axure, Figma.</p>
+<p><b class="b1">Technical Languages: </b > Django, MySQL, Python, Familiarity: HTML, CSS</p>
+<p><b class="b1">Language:</b> English (IELTS Score: 7; 2013), Hindi, Malayalam</p>
+
+<br>
+<h2> Projects</h2><br>
+
+<p><b class="b1">Automation in Cloud Computing Using Constraint Based Agent</b></p> <br>
+    <ol class="ol1">Focus on automation of services request and provisioning of services of cloud based nature</ol>
+    <ol class="ol1">Explains an in depth characteristics of agents</ol>
+    <ol class="ol1">The System design of the algorithmic work flow was done in the tool dia.</ol>
+    <ol class="ol1">The implementation of the project was done in the Colored Petri Net simulation tool.</ol>
+    <ol class="ol1">The Research Paper has been published in IEEEXplore, by clicking the button below you can view the whole paper on ResearchGate portal.</ol>
+    <button type="button" class="btn" >
+        <a href="https://www.researchgate.net/publication/280216557_Automation_In_Cloud_Computing_Using_Constraint_Based_Agent"
+        style="color: #F0FFF0; text-decoration: none;  "><span class="glow" style="display: inline-block;
+  position: relative;
+  z-index: .5;
+  padding: 21px;
+  margin: -.5em;">
+            Link to Research Gate</span></a></button>
+
+
+    <p style="margin-top:50px;"><b class="b1">Virtual Classroom</b></p> <br>
+    <ol class="ol1">Implemented on tools like . net and Ms Access</ol>
+    <ol class="ol1">Platform for conducting online classes and sharing resources</ol>
+
+<!--GIT BUTTON-->
+
+    <button type="button" class="btn" ><a href="https://github.com/Priny" style="color: #F0FFF0;
+    text-decoration: none;  ">
+        <span class="glow" style="display: inline-block;
+  position: relative;
+  z-index: .5;
+  padding: 21px;
+  margin: -.5em;">Link to Git</span> </a></button>
+
+<!--    <button class="gitbtn" style="text-color: yellow;margin-left: 350px;-->
+<!--text-align: justification;"><a href="https://www.w3docs.com/">Link to Git</a></button>-->
+
+<br>
+
+<h2> Workshops/ Seminar/ Certifications</h2><br>
+
+
+    <ol class="ol1"><b class="b1">INTERNATIONAL WORKSHOP</b> on Intelligent Approaches For Object Oriented Modeling In Component Based
+    Software Engineering : Participated Twice</ol>
+    <ol class="ol1"><b class="b1">NATIONAL WORKSHOP</b> on Advancement in Network Communication and Security</ol>
+    <ol class="ol1">Seminar on Basics of Cloud Computing</ol>
+    <ol class="ol1">Certification Course on Product Management</ol>
+    <ol class="ol1">Certification Course on SQL - MySQL</ol>
+    <ol class="ol1">Certification Course on Django and Python</ol>
+    <br>
+ <b><h2 class="h">Education</h2></b><br>
+<!--###########################################################################################################-->
+
+
+<div class="wrapper">
+    <div class="center-line">
+      <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+    </div>
+    <div class="row row-1">
+      <section>
+        <i class="icon fas fa-home"></i>
+        <div class="details">
+          <span class="title">Annamalai University</span>
+          <span>2020</span>
+        </div>
+        <p>M.B.A. in Information Systems</p>
+        <div class="bottom">
+<!--          <a href="#">Read more</a>-->
+<!--          <i>- Someone famous</i>-->
+        </div>
+      </section>
+    </div>
+    <div class="row row-2">
+      <section>
+        <i class="icon fas fa-star"></i>
+        <div class="details">
+          <span class="title">Jaypee University of Engineering and Technology</span>
+          <span>2015</span>
+        </div>
+        <p>Masters in Technology - Computer Science and Engineering</p>
+        <div class="bottom">
+<!--          <a href="#">Read more</a>-->
+<!--          <i>- Someone famous</i>-->
+        </div>
+      </section>
+    </div>
+    <div class="row row-1">
+      <section>
+        <i class="icon fas fa-rocket"></i>
+        <div class="details">
+          <span class="title">Madhav Institute of Technology and Science</span>
+          <span>2012</span>
+        </div>
+        <p>Bachelors in Engineering - Computer Science and Engineering</p>
+        <div class="bottom">
+<!--          <a href="#">Read more</a>-->
+<!--          <i>- Someone famous</i>-->
+        </div>
+      </section>
+<!--    </div>-->
+<!--    <div class="row row-2">-->
+<!--      <section>-->
+<!--        <i class="icon fas fa-globe"></i>-->
+<!--        <div class="details">-->
+<!--          <span class="title">Title of Section 4</span>-->
+<!--          <span>4th Jan 2021</span>-->
+<!--        </div>-->
+<!--        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>-->
+<!--        <div class="bottom">-->
+<!--          <a href="#">Read more</a>-->
+<!--          <i>- Someone famous</i>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--    </div>-->
+<!--    <div class="row row-1">-->
+<!--      <section>-->
+<!--        <i class="icon fas fa-paper-plane"></i>-->
+<!--        <div class="details">-->
+<!--          <span class="title">Title of Section 5</span>-->
+<!--          <span>5th Jan 2021</span>-->
+<!--        </div>-->
+<!--        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>-->
+<!--        <div class="bottom">-->
+<!--          <a href="#">Read more</a>-->
+<!--          <i>- Someone famous</i>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--    </div>-->
+<!--    <div class="row row-2">-->
+<!--      <section>-->
+<!--        <i class="icon fas fa-map-marker-alt"></i>-->
+<!--        <div class="details">-->
+<!--          <span class="title">Title of Section 6</span>-->
+<!--          <span>6th Jan 2021</span>-->
+<!--        </div>-->
+<!--        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>-->
+<!--        <div class="bottom">-->
+<!--          <a href="#">Read more</a>-->
+<!--          <i>- Someone famous</i>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+
+{% endblock %}
